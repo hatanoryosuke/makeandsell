@@ -20,11 +20,14 @@
           = fa_icon 'leaf', class: 'icon'
 
 .show-contents
+  Details
   .show-contents_main
+    
     .show-contents_main_box
       .show-contents_main_box__list
         .show-contents_main_box__list__a
           .show-contents_main_box__list__post{style:"background-image: url(#{@items.image});"}
+        .show-contents_main_box__list__b
           .show-contents_main_box__list__text
             Item name :
             .item_name
@@ -34,4 +37,18 @@
             .price_a
               ¥
               = @items.price.to_s(:delimited)
+          .size
+            Size :
+            .item_name
+             
+          .sentence
+            商品紹介 :
+            .item_name
+              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          
+  .show-icon
+    = fa_icon 'facebook', class: 'icon'
+    = fa_icon 'twitter', class: 'icon'
+    = fa_icon 'google', class: 'icon'
+    = fa_icon 'pinterest', class: 'icon'
 

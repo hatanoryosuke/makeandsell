@@ -1,122 +1,90 @@
-.mypage{
-  width: 100%;
-  height: 200px;
-  background-image: url(https://images.unsplash.com/photo-1543785520-f52fecf4ecfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
-  color: #fff;
+.show-contents{
+  background-image: url(https://images.unsplash.com/photo-1524146128017-b9dd0bfd2778?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
   background-size: 100% 100%;
-  display: flex;
-  justify-content: center;
-  .mypage_top{
-    font-size: 50px;
-    position: relative;
-    top: 45px;
-  }
+  color: #fff;
+  text-align: center;
+  font-size: 70px;
+  height: 100%;
 
-    .mypage_icon{
-      
-      font-size: 100px;
-      position: relative;
-      top: 12px;
-      margin: 0 20px;
-    }
-}
-
-  .side_bar_show{
-    float: left;
-    height: calc(100vh - 147px);
+  .show-contents_main{
+    height: 500px;
+    width: 800px;
+    border: solid 5px #fff;
+    margin: 0 auto;
     
-    .info{
-      display: flex;
-      justify-content: space-between;
-      background-color: #fff;
-      width: 250px;
-      height: 35px;
-      color: #afb4b1;
-      font-size: 20px;
-      // border: solid 1px;
 
 
-      .search{
-       padding-right: 10px;
-      }
-
-    }
-
-
-    .side_bar_box{
-      align-items: center;;
-      width: 250px;
-      background-color: #afb4b1;
-      color: #f8fbfb;
-      border: solid 1px #afb4b1;
-      font-size: 25px;
-      overflow: auto;
-      height: 100%;
-      
-      .side_bar_list{
-        padding: 3px 25px 3px;
-        font-size: 16px;
-        
-      }
-    }
-  }
-  
-.show-contents_main{
-  height: calc(100vh - 110px);
-  // background-color: beige;
-  width: 100%;
-  
-  // color: #f8fbfb;
-  overflow-y: auto;
-
-  .show-contents_main_box{
-    width: 100%;
-    // background-color: #f8fbfb;
-
-    &__list{
-      display: flex;
-      flex-wrap: wrap;
-      // justify-content: space-around;
+    .show-contents_main_box{
       width: 100%;
-      
-      
-      &__a{
-        width: 25%;
-      //  height: 330px;
-      //  padding-bottom: 6px;
-      }
-        &__post{
-          height: 210px;
-          border: solid 1px #afb4b1;
-          background-size: 100% 100%;
-          // background-position: center;
-          // background-repeat: no-repeat;
-          // background-size: contain;
-          
-        }
 
-        &__text{
-          display: flex;
-          padding-left: 5px;
-          height: 30px;
-          
-          color: black;
-          border: solid 1px #afb4b1;
-          background-color: #f8fbfb;
-        }
+      &__list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
         
-        .price{
+        
+        &__a{
+          
           display: flex;
-          padding-left: 5px;
-          height: 50px;
-          color: black;
-          border: solid 1px #afb4b1;
-          background-color: #f8fbfb;
+        }
+          &__post{
+            height: 500px;
+            width: 500px;
+            border: solid 1px #afb4b1;
+            background-size: 100% 100%;
 
-          .price_a{
-            font-size: 35px;
+          }
+
+        .show-contents_main_box__list__b{
+          width: 296px;
+          font-size: 20px;
+          border: solid 1px #afb4b1;
+          .show-contents_main_box__list__text{
+            display: flex;
+            padding: 7px;
+            height: 32px;
+            
+            color: black;
+            border: solid 1px #afb4b1;
+            background-color: #f8fbfb;
+          }
+          
+          .price{
+            display: flex;
+            padding-left: 5px;
+            height: 50px;
+            color: black;
+            border: solid 1px #afb4b1;
+            background-color: #f8fbfb;
+
+            .price_a{
+              font-size: 35px;
+            }
+          }
+          .size{
+            padding: 7px;
+            height: 32px;
+            color: black;
+            border: solid 1px #afb4b1;
+            background-color: #f8fbfb;
+            text-align: left;
+          }
+          .sentence{
+            padding-left: 5px;
+            height: 350px;
+            color: black;
+            border: solid 1px #afb4b1;
+            background-color: #f8fbfb;
+            text-align: left;
+            overflow-wrap: break-word;
           }
         }
+      }
     }
+  }
+  .show-icon{
+    font-size: 40px;
+    color: #fff;
+    margin-top: 10px;
   }
 }
