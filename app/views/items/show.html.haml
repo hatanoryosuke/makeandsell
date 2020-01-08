@@ -1,0 +1,37 @@
+.heder
+  .heder_left
+    .heder_left_name
+      = link_to root_path do
+        Make&Sell
+  .heder_content
+    %ul.heder_content_left
+      %li.list
+        = link_to current_user.name,  user_path(current_user.id)
+        = fa_icon 'user-circle', class: 'icon'
+    %ul.heder_content_left
+      %li.list
+        = link_to new_item_path do
+          item 
+          = fa_icon 'image', class: 'icon'
+    %ul.heder_content_center
+      %li.list
+        = link_to new_genre_path do
+          genre
+          = fa_icon 'leaf', class: 'icon'
+
+.show-contents
+  .show-contents_main
+    .show-contents_main_box
+      .show-contents_main_box__list
+        .show-contents_main_box__list__a
+          .show-contents_main_box__list__post{style:"background-image: url(#{@items.image});"}
+          .show-contents_main_box__list__text
+            Item name :
+            .item_name
+              = @items.name
+          .price
+            Price
+            .price_a
+              ¥
+              = @items.price.to_s(:delimited)
+

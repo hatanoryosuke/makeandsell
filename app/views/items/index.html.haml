@@ -48,21 +48,23 @@
       .contents_main_box__list
         - @items.each do |item|
           .contents_main_box__list__a
-            .contents_main_box__list__post{style:"background-image: url(#{item.image});"}
-              -# .more
-              -#   %ul.more_list
-              -#     %li
-              -#       = link_to '削除', "/contents/#{content.id}", method: :delete
+            = link_to "/items/#{item.id}", method: :get do
+              .contents_main_box__list__post{style:"background-image: url(#{item.image});"}
+                
+                -# .more
+                -#   %ul.more_list
+                -#     %li
+                -#       = link_to '削除', "/contents/#{content.id}", method: :delete
 
-            .contents_main_box__list__text
-              Item name :
-              .item_name
-                = item.name
-            .price
-              Price
-              .price_a
-                ¥
-                = item.price.to_s(:delimited)
+              .contents_main_box__list__text
+                Item name :
+                .item_name
+                  = item.name
+              .price
+                Price
+                .price_a
+                  ¥
+                  = item.price.to_s(:delimited)
 .contents_low
   .info
     information
