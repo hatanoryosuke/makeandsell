@@ -1,0 +1,73 @@
+.heder
+  .heder_left
+    .heder_left_name
+      Make&Sell
+  .heder_content
+    %ul.heder_content_left
+      %li.list
+        = link_to current_user.name,  user_path(current_user.id)
+        = fa_icon 'user-circle', class: 'icon'
+    %ul.heder_content_left
+      %li.list
+        = link_to new_item_path do
+          item 
+          = fa_icon 'image', class: 'icon'
+    %ul.heder_content_center
+      %li.list
+        = link_to new_genre_path do
+          genre
+          = fa_icon 'leaf', class: 'icon'
+    -# %ul.heder_content_right
+    -#   %li.list
+    -#     = link_to edit_user_path(current_user) do
+    -#       User edit
+    -#       = fa_icon 'id-badge', class: 'icon'
+.side_bar
+  .info
+    = form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form|
+      = form.text_field :keyword, placeholder: "検索", class: "info"
+      .search
+        %button.search{type: "submit"}
+          %i.icon
+            = fa_icon 'search'
+    -# 検索
+    -# .search
+    -#   fa_icon 'search', class: 'icon'
+  .side_bar_box
+    Category
+    -@genres.each do |genre|
+      .side_bar_list
+        = genre.name
+      
+.contents
+  .contents_top
+    .list
+      New item
+  .contents_main
+    .contents_main_box
+      .contents_main_box__list
+        - @items.each do |item|
+          .contents_main_box__list__a
+            .contents_main_box__list__post{style:"background-image: url(#{item.image});"}
+              -# .more
+              -#   %ul.more_list
+              -#     %li
+              -#       = link_to '削除', "/contents/#{content.id}", method: :delete
+
+            .contents_main_box__list__text
+              Item name :
+              .item_name
+                = item.name
+            .price
+              Price
+              .price_a
+                ¥
+                = item.price.to_s(:delimited)
+.contents_low
+  .info
+    information
+  .icon
+    = fa_icon 'facebook', class: 'icon'
+    = fa_icon 'twitter', class: 'icon'
+    = fa_icon 'google', class: 'icon'
+    = fa_icon 'pinterest', class: 'icon'

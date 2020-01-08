@@ -1,0 +1,67 @@
+.account-page__inner.clearfix{
+  width: 100%;
+  height: 700px;
+  background-image: url(https://images.unsplash.com/photo-1514443031610-8c063c7a9822?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
+  color: #fff;
+  background-size: 100% 100%;
+
+  .account-page__inner--left.account-page__header{
+   text-align: center;
+   padding-top: 50px;
+    .log_in{
+      font-size: 70px;
+    }
+
+    .log_in_user{
+      font-size: 30px;
+    }
+    a{
+      text-align: left;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  .account-page__inner--right.user-form{
+    height: 200px;
+    width: 300px;
+    padding: 3% 41% 0;
+    .field{
+      .field-label{
+        margin: 10px 0 10px;
+      }
+        
+      .field-input{
+        margin: 10px 0 10px;
+      }
+      .field{
+        .field-label{
+
+        }
+          
+        .field-input{
+
+        }
+      }
+      .actions{
+        margin: 10px 0 10px;
+
+      }
+    }
+  }
+  .info{
+    
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    top: 10px;
+    .icon{
+     
+      text-align: center;
+      position: relative;
+      font-size: 40px;
+      padding: 0 10px 0;
+      cursor: pointer;
+    }
+  }
+  
+}

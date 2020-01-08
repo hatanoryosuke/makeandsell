@@ -1,0 +1,28 @@
+.heder
+  .heder_left
+    .heder_left_name
+      = link_to root_path do
+        Make&Sell
+  .heder_content
+    %ul.heder_content_left
+      %li.list
+        = link_to current_user.name,  user_path(current_user.id)
+        = fa_icon 'user-circle', class: 'icon'
+.item_new
+  .item_new__top
+    Product registration
+  .item_new_create
+    .container
+      = form_with(model: @items,method: :post, local: true) do |form|
+        .list
+          .image
+            = form.label :image,"商品画像" 
+            = form.file_field :image
+          .name
+            商品名：
+            = form.text_field :name, placeholder: "Item name" , rows: "2"
+          .price
+            金額：
+            = form.text_field :price, placeholder: "Item price"
+          .btn
+            = form.submit "SEND"

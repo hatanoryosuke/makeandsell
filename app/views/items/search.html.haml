@@ -1,0 +1,73 @@
+.heder
+  .heder_left
+    .heder_left_name
+      = link_to root_path do
+        Make&Sell
+  .heder_content
+    %ul.heder_content_left
+      %li.list
+        = link_to current_user.name,  user_path(current_user.id)
+        = fa_icon 'user-circle', class: 'icon'
+    %ul.heder_content_left
+      %li.list
+        = link_to new_item_path do
+          item 
+          = fa_icon 'image', class: 'icon'
+    %ul.heder_content_center
+      %li.list
+        = link_to new_genre_path do
+          genre
+          = fa_icon 'leaf', class: 'icon'
+    
+
+.search_top
+  .search_top__list
+    search results
+  .search_top__icon
+    = fa_icon 'bookmark', class: 'icon'
+
+.side_search
+  .info
+    = form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form|
+      = form.text_field :keyword, placeholder: "検索", class: "info"
+      .search
+        %button.search{type: "submit"}
+          %i.icon
+            = fa_icon 'search'
+    -# 検索
+    -# .search
+    -#   fa_icon 'search', class: 'icon'
+  .side_bar_box
+    Category
+    -@genre.each do |genre|
+      .side_bar_list
+        = genre.name
+      
+.contents
+  -# .contents_top
+  -#   = "#{current_user.name} item list"
+  .contents_main
+    .contents_main_box
+      .contents_main_box__list
+        - @items.each do |items|
+          .contents_main_box__list__a
+            .contents_main_box__list__post{style:"background-image: url(#{items.image});"}
+
+            .contents_main_box__list__text
+              Item name :
+              .item_name
+                = items.name
+            .price
+              Price
+              .price_a
+                ¥
+                = items.price.to_s(:delimited)
+.contents_low
+  .info
+    information
+  .icon
+    = fa_icon 'facebook', class: 'icon'
+    = fa_icon 'twitter', class: 'icon'
+    = fa_icon 'google', class: 'icon'
+    = fa_icon 'pinterest', class: 'icon'
+  
