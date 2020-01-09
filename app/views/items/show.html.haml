@@ -22,7 +22,6 @@
 .show-contents
   Details
   .show-contents_main
-    
     .show-contents_main_box
       .show-contents_main_box__list
         .show-contents_main_box__list__a
@@ -39,13 +38,19 @@
               = @items.price.to_s(:delimited)
           .size
             Size :
-            .item_name
-             
+            W
+            = @items.size_w
+            D
+            = @items.size_d
+            H
+            = @items.size_h
           .sentence
             商品紹介 :
             .item_name
-              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-          
+              = @items.text
+  .edit
+    = link_to '編集', "/items/#{@items.id}/edit", method: :get
+  .delete
   .show-icon
     = fa_icon 'facebook', class: 'icon'
     = fa_icon 'twitter', class: 'icon'

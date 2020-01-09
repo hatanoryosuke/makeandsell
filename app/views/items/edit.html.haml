@@ -10,10 +10,10 @@
         = fa_icon 'user-circle', class: 'icon'
 .item_new
   .item_new__top
-    Product registration
+    Product edit
   .item_new_create
     .container
-      = form_with(model: @items,method: :post, local: true) do |form|
+      = form_with(model: @item, local: true) do |form|
         .list
           .image
             = form.label :image,"商品画像" 

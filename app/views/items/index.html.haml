@@ -30,9 +30,6 @@
         %button.search{type: "submit"}
           %i.icon
             = fa_icon 'search'
-    -# 検索
-    -# .search
-    -#   fa_icon 'search', class: 'icon'
   .side_bar_box
     Category
     -@genres.each do |genre|
@@ -50,11 +47,6 @@
           .contents_main_box__list__a
             = link_to "/items/#{item.id}", method: :get do
               .contents_main_box__list__post{style:"background-image: url(#{item.image});"}
-                
-                -# .more
-                -#   %ul.more_list
-                -#     %li
-                -#       = link_to '削除', "/contents/#{content.id}", method: :delete
 
               .contents_main_box__list__text
                 Item name :

@@ -1,6 +1,6 @@
 .item_new{
   width: 100%;
-  height: 700px;
+  height: 900px;
   background-image: url(https://images.unsplash.com/photo-1501516069922-a9982bd6f3bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
   color: #fff;
   background-size: 100% 100%;
@@ -14,7 +14,7 @@
   }
 
   .item_new_create{
-    padding: 10% 35%;
+    padding: 3% 35%;
     
     .container{
       .list{
@@ -29,6 +29,22 @@
         }
         .btn{
           padding: 20px;
+        }
+        .size_w{
+          padding: 20px;
+        }
+        .size_d{
+          padding: 20px;
+        }
+        .size_h{
+          padding: 20px;
+        }
+        .text{
+          padding: 20px;
+          .input{
+            width: 320px;
+            height: 150px;
+          }
         }
       }
     }

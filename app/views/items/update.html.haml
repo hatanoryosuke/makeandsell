@@ -1,0 +1,15 @@
+.heder
+  .heder_left
+    .heder_left_name
+      = link_to root_path do
+        Make&Sell
+  .heder_content
+    %ul.heder_content_left
+      %li.list
+        = link_to current_user.name,  user_path(current_user.id)
+        = fa_icon 'user-circle', class: 'icon'
+
+.update
+  編集が完了しました。
+  = link_to root_path do
+    Top
