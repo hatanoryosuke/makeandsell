@@ -50,6 +50,7 @@
               = @items.text
   .edit
     = link_to '編集', "/items/#{@items.id}/edit", method: :get
+    = link_to '削除', "/items/#{@items.id}", method: :delete
   .delete
   .show-icon
     = fa_icon 'facebook', class: 'icon'
