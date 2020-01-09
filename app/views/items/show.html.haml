@@ -20,7 +20,7 @@
           = fa_icon 'leaf', class: 'icon'
 
 .show-contents
-  Details
+  Details & Comment
   .show-contents_main
     .show-contents_main_box
       .show-contents_main_box__list
@@ -54,7 +54,19 @@
         = link_to '編集', "/items/#{@items.id}/edit", method: :get
       .destroy
         = link_to '削除', "/items/#{@items.id}", method: :delete
-    -# -else
+
+  .comment
+    -if current_user
+      = form_with(model: [@items, @comment], local: true) do |form|
+        .comment_box
+          .comment_box_text
+            = form.text_field :text, placeholder: "コメントする", rows: "2", class: "comment_box_text_in"
+          .comment_box_price
+            .comment_box_price_in
+              = form.text_field :price, placeholder: "評価額を入力して下さい", class: "comment_box_price_in"
+            .comment_box_btn
+              = form.submit "SEND", class: "btn"
+
   .show-icon
     = fa_icon 'facebook', class: 'icon'
     = fa_icon 'twitter', class: 'icon'

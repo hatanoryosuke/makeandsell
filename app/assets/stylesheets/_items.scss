@@ -1,6 +1,5 @@
 body{
-  // background-color: #4b4f54;
-  font-family: cursive;
+  font-family: cursive, Georgia, 'Times New Roman', Times, serif;
   width: 100vw;
   height: 100vh;
   
@@ -162,14 +161,16 @@ body{
               
             }
 
-            &__text{
+            .contents_main_box__list__text{
               display: flex;
               padding-left: 5px;
               height: 30px;
-              
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
+              overflow:hidden;
+              text-overflow: ellipsis;
+              white-space:nowrap;
             }
             
             .price{
@@ -179,7 +180,9 @@ body{
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
-
+              overflow:hidden;
+              text-overflow: ellipsis;
+              white-space:nowrap;
               .price_a{
                 font-size: 35px;
               }

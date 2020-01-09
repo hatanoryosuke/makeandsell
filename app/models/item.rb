@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   mount_uploader :image, ImageUploader
-  belongs_to :item
+  belongs_to :user
+  has_many :comments
 
   def self.search(search)
     return Item.all unless search

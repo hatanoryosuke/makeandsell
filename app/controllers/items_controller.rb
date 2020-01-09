@@ -19,6 +19,8 @@ class ItemsController < ApplicationController
 
   def show
     @items = Item.find(params[:id])
+    @comment = Comment.new
+    # @comments = @item.comments.includes(:user)
   end
   
   def destroy
@@ -39,4 +41,5 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:price, :name, :image, :size_w, :size_d, :size_h, :text,).merge(user_id: current_user.id)
   end
+  
 end

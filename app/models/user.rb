@@ -7,6 +7,5 @@ class User < ApplicationRecord
          has_many :genre_items
          has_many :genres, through: :genre_items
          has_many :items
-
-
+         has_many :comments
         end
