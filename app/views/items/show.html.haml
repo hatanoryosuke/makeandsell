@@ -49,11 +49,12 @@
             .item_name
               = @items.text
   .show_btn
-    .edit
-      = link_to '編集', "/items/#{@items.id}/edit", method: :get
-    .destroy
-      = link_to '削除', "/items/#{@items.id}", method: :delete
-    .delete
+    -if current_user.id == @items.user_id
+      .edit
+        = link_to '編集', "/items/#{@items.id}/edit", method: :get
+      .destroy
+        = link_to '削除', "/items/#{@items.id}", method: :delete
+    -# -else
   .show-icon
     = fa_icon 'facebook', class: 'icon'
     = fa_icon 'twitter', class: 'icon'
