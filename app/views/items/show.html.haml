@@ -48,10 +48,12 @@
             商品紹介 :
             .item_name
               = @items.text
-  .edit
-    = link_to '編集', "/items/#{@items.id}/edit", method: :get
-    = link_to '削除', "/items/#{@items.id}", method: :delete
-  .delete
+  .show_btn
+    .edit
+      = link_to '編集', "/items/#{@items.id}/edit", method: :get
+    .destroy
+      = link_to '削除', "/items/#{@items.id}", method: :delete
+    .delete
   .show-icon
     = fa_icon 'facebook', class: 'icon'
     = fa_icon 'twitter', class: 'icon'
