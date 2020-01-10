@@ -22,54 +22,81 @@
 .show-contents
   Details & Comment
   .show-contents_main
-    .show-contents_main_box
-      .show-contents_main_box__list
-        .show-contents_main_box__list__a
-          .show-contents_main_box__list__post{style:"background-image: url(#{@items.image});"}
-        .show-contents_main_box__list__b
-          .show-contents_main_box__list__text
-            Item name :
-            .item_name
-              = @items.name
-          .price
-            Price
-            .price_a
-              ¥
-              = @items.price.to_s(:delimited)
-          .size
-            Size :
-            W
-            = @items.size_w
-            D
-            = @items.size_d
-            H
-            = @items.size_h
-          .sentence
-            商品紹介 :
-            .item_name
-              = @items.text
-  .show_btn
-    -if current_user.id == @items.user_id
-      .edit
-        = link_to '編集', "/items/#{@items.id}/edit", method: :get
-      .destroy
-        = link_to '削除', "/items/#{@items.id}", method: :delete
+    .show-contents_main_in
+      .show-contents_main_box
+        .show-contents_main_box__list
+          .show-contents_main_box__list__a
+            .show-contents_main_box__list__post{style:"background-image: url(#{@items.image});"}
+            .evaluation
+              .evaluation_box
+                .evaluation_box_text
+                  現在の評価額
+                .evaluation_box_price
+                  .evaluation_box_price__in
+                    ¥
+          .show-contents_main_box__list__b
+            .show-contents_main_box__list__text
+              Item name :
+              .item_name
+                = @items.name
+            .price
+              Price
+              .price_a
+                ¥
+                = @items.price.to_s(:delimited)
+            .size
+              Size :
+              W
+              = @items.size_w
+              D
+              = @items.size_d
+              H
+              = @items.size_h
+            .sentence
+              商品紹介 :
+              .item_name
+                = @items.text
+              
+              -if current_user.id == @items.user_id
+                .show_btn
+                  .show_btn_in
+                    .edit
+                      = link_to '編集', "/items/#{@items.id}/edit", method: :get
+                    .destroy
+                      = link_to '削除', "/items/#{@items.id}", method: :delete
 
-  .comment
-    -if current_user
-      = form_with(model: [@items, @comment], local: true) do |form|
-        .comment_box
-          .comment_box_text
-            = form.text_field :text, placeholder: "コメントする", rows: "2", class: "comment_box_text_in"
-          .comment_box_price
-            .comment_box_price_in
-              = form.text_field :price, placeholder: "評価額を入力して下さい", class: "comment_box_price_in"
-            .comment_box_btn
-              = form.submit "SEND", class: "btn"
+      .comment
+        -if current_user
+          = form_with(model: [@items, @comment], local: true) do |form|
+            .comment_box
+              .comment_box_text
+                = form.text_field :text, placeholder: "コメントする", rows: "2", class: "comment_box_text_in"
+              .comment_box_price
+                .comment_box_price_in
+                  = form.text_field :price, placeholder: "評価額を入力して下さい", class: "comment_box_price_in"
+                .comment_box_btn
+                  = form.submit "SEND", class: "btn"
+              
+    .message
+      -if @comments
+        - @comments.each do |comment|
+          .message_list
+            %strong
+              user name :
+              = link_to comment.user.name, "/users/#{comment.user_id}"
+              .message_list_in
+                comment
+                .message_list_in_text
+                  = comment.text
+              .message_list_price
+                評価額は
+                .message_list_price_in
+                  ¥
+                  = comment.price
+                  
 
   .show-icon
     = fa_icon 'facebook', class: 'icon'
     = fa_icon 'twitter', class: 'icon'
     = fa_icon 'google', class: 'icon'
     = fa_icon 'pinterest', class: 'icon'
-

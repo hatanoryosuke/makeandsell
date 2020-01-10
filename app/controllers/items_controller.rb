@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   def show
     @items = Item.find(params[:id])
     @comment = Comment.new
-    # @comments = @item.comments.includes(:user)
+    @comments = @items.comments.includes(:user)
   end
   
   def destroy
