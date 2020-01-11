@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @items = current_user.items
+    @items = current_user.items.order("created_at DESC")
+    @genres = Genre.all
     @genre = Genre.all
   end
 
@@ -11,6 +12,7 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update(user_params)
+
       redirect_to root_path
     else
       render :edit

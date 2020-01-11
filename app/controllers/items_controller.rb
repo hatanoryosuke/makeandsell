@@ -21,6 +21,7 @@ class ItemsController < ApplicationController
     @items = Item.find(params[:id])
     @comment = Comment.new
     @comments = @items.comments.includes(:user).order("created_at DESC")
+    @price = Comment.where.not(price: nil).average(:price)
   end
   
   def destroy

@@ -34,13 +34,15 @@
                 .evaluation_box_price
                   .evaluation_box_price__in
                     ¥
+                    = @price.round.to_s(:delimited)
           .show-contents_main_box__list__b
             .show-contents_main_box__list__text
               Item name :
               .item_name
                 = @items.name
             .price
-              Price
+              .price_text
+                Price (想定価格)
               .price_a
                 ¥
                 = @items.price.to_s(:delimited)
@@ -77,8 +79,8 @@
                 .comment_box_btn
                   = form.submit "SEND", class: "btn"
               
-    .message
-      -if @comments
+    -if @comments.present? 
+      .message
         - @comments.each do |comment|
           .message_list
             .message_list_box

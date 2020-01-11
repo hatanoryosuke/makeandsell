@@ -39,13 +39,14 @@
             }
 
             .evaluation{
-              width: 100%;
+              width: 316px;
               height: 90px;
               border: solid 1px #afb4b1;
               background-color: #fff;
               color: #000000;
               font-size: 17px;
               .evaluation_box{
+                width: 100%;
                 .evaluation_box_text{
                   height: 30px;
                   border: solid 1px #afb4b1;
@@ -54,10 +55,10 @@
                 .evaluation_box_price{
                   border: solid 1px #afb4b1;
                   height: 56px;
-                  text-align: justify;
+                  text-align: center;
                   font-size: 35px;
                   &__in{
-                    margin-left: 17px;
+                    // margin-left: 17px;
                   }
                 }
               }
@@ -70,7 +71,7 @@
             .show-contents_main_box__list__text{
               display: flex;
               padding: 7px;
-              height: 32px;
+              height: 27px;
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
@@ -80,24 +81,29 @@
             }
             
             .price{
-              display: flex;
+              // display: flex;
               padding-left: 5px;
-              height: 50px;
+              height: 60px;
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
-              overflow: auto;
               text-overflow: ellipsis;
               white-space: nowrap;
+              text-align: left;
+              .price_text{
+                height: 20px;
+              }
 
               .price_a{
                 font-size: 35px;
-                margin-left: 10px;
+                position: relative;
+                top: -10px;
+                left: 10px;
               }
             }
             .size{
               padding: 7px;
-              height: 32px;
+              height: 27px;
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
@@ -114,6 +120,7 @@
               background-color: #f8fbfb;
               text-align: left;
               overflow-wrap: break-word;
+              overflow: auto;
               position: relative;
 
               .show_btn{
@@ -125,7 +132,7 @@
                 text-align: center;
                 border-radius: 15px;
                 right: 7px;
-                position: absolute;
+                position: relative;
                 bottom: 0;
 
                 .show_btn_in{
@@ -215,69 +222,69 @@
       }
     }
   }
-  .message{
-    width: 300px;
-    height: 668px;
-    border: solid 5px #fff;
-    margin-left: 20px;
-    position: relative;
-    right: 60px;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 20px;
-    text-align: left;
-    overflow: auto;
-    overflow-wrap: break-word;
-    
-    .message_list{
-      width: 300px;
-      a{
-        text-decoration: none;
-        color: #fff;
-        display: inline-block;
-        background-color: #978d04;
-        border-radius: 30px;
-        overflow-wrap: break-word;
-        padding: 0 10px;
-        text-align: center;
-        
-      }
-      .message_list_box{
-        // width: 180px;
-        
-        margin: 5px;
-        border-radius: 30px;
-        overflow-wrap: break-word;
-        strong{
-          position: relative;
-          left: 5px;
-        }
-      }
-      .message_list_box_a{
-        width: 250px;
-        margin: 5px auto;
-        background-color: #fff;
+      .message{
+        width: 300px;
+        height: 668px;
+        border: solid 5px #fff;
+        margin-left: 20px;
+        position: relative;
+        right: 60px;
         border-radius: 20px;
-        color: #000000;
-        padding: 0 10px;
-        .message_list_box_in{
-          position: relative;
-          left: 5px;
-        }
-      
-        .message_list_price{
-          font-size: 17px;
-          display: flex;
-          position: relative;
-          left: 5px;
-          .message_list_price_in{
-            font-size: 22px;
-            margin: -7px 5px;
+        color: #fff;
+        font-size: 20px;
+        text-align: left;
+        overflow: auto;
+        overflow-wrap: break-word;
+        
+        .message_list{
+          width: 300px;
+          a{
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            background-color: #978d04;
+            border-radius: 30px;
+            overflow-wrap: break-word;
+            padding: 0 10px;
+            text-align: center;
+            
+          }
+          .message_list_box{
+            // width: 180px;
+            
+            margin: 5px;
+            border-radius: 30px;
+            overflow-wrap: break-word;
+            strong{
+              position: relative;
+              left: 5px;
+            }
+          }
+          .message_list_box_a{
+            width: 250px;
+            margin: 5px auto;
+            background-color: #fff;
+            border-radius: 20px;
+            color: #000000;
+            padding: 0 10px;
+            .message_list_box_in{
+              position: relative;
+              left: 5px;
+            }
+          
+            .message_list_price{
+              font-size: 17px;
+              display: flex;
+              position: relative;
+              left: 5px;
+              .message_list_price_in{
+                font-size: 22px;
+                margin: -7px 5px;
+              }
+            }
           }
         }
       }
-    }
-  }
   
   .show-icon{
     font-size: 40px;
