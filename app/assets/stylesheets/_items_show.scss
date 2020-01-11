@@ -5,6 +5,7 @@
   text-align: center;
   font-size: 70px;
   height: 900px;
+  
 
   .show-contents_main{
     height: 700px;
@@ -120,7 +121,7 @@
                 height: 40px;
                 display: flex;
                 margin: 5px auto;
-                background-color: #afb4b1;
+                background-color: #978d04;
                 text-align: center;
                 border-radius: 15px;
                 right: 7px;
@@ -135,7 +136,6 @@
                     height: 25px;
                     font-size: 17px;
                     border: solid 2px #fff;
-                    background-color: #afb4b1;
                     margin: 0 10px;
                     border-radius: 7px;
                     a{
@@ -148,7 +148,6 @@
                     height: 25px;
                     font-size: 17px;
                     border: solid 2px #fff;
-                    background-color: #afb4b1;
                     margin: 0 10px;
                     border-radius: 7px;
                     a{
@@ -223,28 +222,59 @@
     margin-left: 20px;
     position: relative;
     right: 60px;
-    border-radius: 10px;
-    background-color: #fff;
-    color: #000000;
+    border-radius: 20px;
+    color: #fff;
     font-size: 20px;
     text-align: left;
     overflow: auto;
     overflow-wrap: break-word;
+    
     .message_list{
+      width: 300px;
       a{
         text-decoration: none;
-        color: #000000;
-      }
-      .message_list_in{
+        color: #fff;
+        display: inline-block;
+        background-color: #978d04;
+        border-radius: 30px;
+        overflow-wrap: break-word;
+        padding: 0 10px;
+        text-align: center;
         
       }
-    }
-    .message_list_price{
-      font-size: 17px;
-      display: flex;
-      .message_list_price_in{
-        font-size: 22px;
-        margin: -7px 5px;
+      .message_list_box{
+        // width: 180px;
+        
+        margin: 5px;
+        border-radius: 30px;
+        overflow-wrap: break-word;
+        strong{
+          position: relative;
+          left: 5px;
+        }
+      }
+      .message_list_box_a{
+        width: 250px;
+        margin: 5px auto;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #000000;
+        padding: 0 10px;
+        .message_list_box_in{
+          position: relative;
+          left: 5px;
+        }
+      
+        .message_list_price{
+          font-size: 17px;
+          display: flex;
+          position: relative;
+          left: 5px;
+          .message_list_price_in{
+            font-size: 22px;
+            margin: -7px 5px;
+          }
+        }
       }
     }
   }
@@ -252,6 +282,5 @@
   .show-icon{
     font-size: 40px;
     color: #fff;
-    
   }
 }

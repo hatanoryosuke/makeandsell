@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
+    @items = Item.all.order("created_at DESC")
     @genres = Genre.all
   end
 
@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   def show
     @items = Item.find(params[:id])
     @comment = Comment.new
-    @comments = @items.comments.includes(:user)
+    @comments = @items.comments.includes(:user).order("created_at DESC")
   end
   
   def destroy

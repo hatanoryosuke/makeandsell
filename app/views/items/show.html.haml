@@ -81,18 +81,21 @@
       -if @comments
         - @comments.each do |comment|
           .message_list
-            %strong
-              user name :
-              = link_to comment.user.name, "/users/#{comment.user_id}"
-              .message_list_in
+            .message_list_box
+              %strong
+                -# user name :
+                = link_to comment.user.name, "/users/#{comment.user_id}"
+            .message_list_box_a
+              .message_list_box_in
                 comment
                 .message_list_in_text
                   = comment.text
-              .message_list_price
-                評価額は
-                .message_list_price_in
-                  ¥
-                  = comment.price
+              -if comment.price.present? 
+                .message_list_price
+                  評価額は
+                  .message_list_price_in
+                    ¥
+                    = comment.price.to_s(:delimited)
                   
 
   .show-icon
