@@ -11,11 +11,12 @@
     height: 700px;
     width: 100vw;
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    overflow: auto;
 
     .show-contents_main_in{
       width: 570px;
-      margin: 0 auto;
+      // margin: 0 auto;
       .show-contents_main_box{
         // width: 100%;
         border: solid 5px #fff;
@@ -223,63 +224,66 @@
     }
   }
       .message{
-        width: 300px;
-        height: 668px;
-        border: solid 5px #fff;
         margin-left: 20px;
-        position: relative;
-        right: 60px;
-        border-radius: 20px;
-        color: #fff;
-        font-size: 20px;
-        text-align: left;
-        overflow: auto;
-        overflow-wrap: break-word;
-        
-        .message_list{
+        .message_in{
           width: 300px;
-          a{
-            text-decoration: none;
-            color: #fff;
-            display: inline-block;
-            background-color: #978d04;
-            border-radius: 30px;
-            overflow-wrap: break-word;
-            padding: 0 10px;
-            text-align: center;
-            
-          }
-          .message_list_box{
-            // width: 180px;
-            
-            margin: 5px;
-            border-radius: 30px;
-            overflow-wrap: break-word;
-            strong{
-              position: relative;
-              left: 5px;
-            }
-          }
-          .message_list_box_a{
-            width: 250px;
-            margin: 5px auto;
-            background-color: #fff;
-            border-radius: 20px;
-            color: #000000;
-            padding: 0 10px;
-            .message_list_box_in{
-              position: relative;
-              left: 5px;
-            }
+          height: 668px;
+          border: solid 5px #fff;
+          // margin-left: 20px;
+          // position: relative;
+          // right: 60px;
+          border-radius: 20px;
+          color: #fff;
+          font-size: 20px;
+          text-align: left;
+          overflow: auto;
+          overflow-wrap: break-word;
           
-            .message_list_price{
-              font-size: 17px;
-              display: flex;
-              position: relative;
-              left: 5px;
-              .message_list_price_in{
-                font-size: 22px;
-                margin: -7px 5px;
+          .message_list{
+            width: 300px;
+            a{
+              text-decoration: none;
+              color: #fff;
+              display: inline-block;
+              background-color: #978d04;
+              border-radius: 30px;
+              overflow-wrap: break-word;
+              padding: 0 10px;
+              text-align: center;
+              
+            }
+            .message_list_box{
+              // width: 180px;
+              
+              margin: 5px;
+              border-radius: 30px;
+              overflow-wrap: break-word;
+              strong{
+                position: relative;
+                left: 5px;
+              }
+            }
+            .message_list_box_a{
+              width: 250px;
+              margin: 5px auto;
+              background-color: #fff;
+              border-radius: 20px;
+              color: #000000;
+              padding: 0 10px;
+              .message_list_box_in{
+                position: relative;
+                left: 5px;
+              }
+            
+              .message_list_price{
+                font-size: 17px;
+                display: flex;
+                position: relative;
+                left: 5px;
+                .message_list_price_in{
+                  font-size: 22px;
+                  margin: -7px 5px;
+                }
               }
             }
           }

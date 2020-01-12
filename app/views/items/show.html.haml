@@ -31,10 +31,15 @@
               .evaluation_box
                 .evaluation_box_text
                   現在の評価額
-                .evaluation_box_price
-                  .evaluation_box_price__in
-                    ¥
-                    = @price.round.to_s(:delimited)
+                -if @price.present? 
+                  .evaluation_box_price
+                    .evaluation_box_price__in
+                      ¥
+                      = @price.round.to_s(:delimited)
+                - else
+                  .evaluation_box_price
+                    .evaluation_box_price__in
+                      
           .show-contents_main_box__list__b
             .show-contents_main_box__list__text
               Item name :
@@ -81,23 +86,24 @@
               
     -if @comments.present? 
       .message
-        - @comments.each do |comment|
-          .message_list
-            .message_list_box
-              %strong
-                -# user name :
-                = link_to comment.user.name, "/users/#{comment.user_id}"
-            .message_list_box_a
-              .message_list_box_in
-                comment
-                .message_list_in_text
-                  = comment.text
-              -if comment.price.present? 
-                .message_list_price
-                  評価額は
-                  .message_list_price_in
-                    ¥
-                    = comment.price.to_s(:delimited)
+        .message_in
+          - @comments.each do |comment|
+            .message_list
+              .message_list_box
+                %strong
+                  -# user name :
+                  = link_to comment.user.name, "/users/#{comment.user_id}"
+              .message_list_box_a
+                .message_list_box_in
+                  comment
+                  .message_list_in_text
+                    = comment.text
+                -if comment.price.present? 
+                  .message_list_price
+                    評価額は
+                    .message_list_price_in
+                      ¥
+                      = comment.price.to_s(:delimited)
                   
 
   .show-icon
