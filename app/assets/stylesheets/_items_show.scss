@@ -257,8 +257,6 @@
               
             }
             .message_list_box{
-              // width: 180px;
-              
               margin: 5px;
               border-radius: 30px;
               overflow-wrap: break-word;
@@ -277,6 +275,21 @@
               .message_list_box_in{
                 position: relative;
                 left: 5px;
+                display: flex;
+                justify-content: space-between;
+
+                a{
+                  width: 30px;
+                  height: 20px;
+                  font-size: 15px;
+                  padding: 0 10px;
+                  text-align: center;
+                  position: relative;
+                  top: 6px;
+                  right: 5px;
+                  padding-bottom: 2px;
+                }
+                
               }
             
               .message_list_price{

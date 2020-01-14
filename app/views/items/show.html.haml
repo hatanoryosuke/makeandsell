@@ -71,8 +71,7 @@
                     .destroy
                       = link_to '削除', "/items/#{@items.id}", method: :delete
               - else
-                .item_name
-                  = @items.text
+                = @items.text
 
       .comment
         -if current_user
@@ -97,9 +96,13 @@
                   = link_to comment.user.name, "/users/#{comment.user_id}"
               .message_list_box_a
                 .message_list_box_in
-                  comment
-                  .message_list_in_text
-                    = comment.text
+                  .message_list_comment
+                    comment
+                  -if current_user.id == comment.user_id
+                    .destroy_text
+                    = link_to '削除', "/items/:item_id/comments/#{comment.id}", method: :delete
+                .message_list_in_text
+                  = comment.text
                 -if comment.price.present? 
                   .message_list_price
                     評価額は
