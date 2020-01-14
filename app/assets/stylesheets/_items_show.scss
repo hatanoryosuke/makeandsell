@@ -123,6 +123,10 @@
               overflow-wrap: break-word;
               overflow: auto;
               position: relative;
+              .sentence_in{
+                height: 200px;
+                overflow: auto;
+              }
 
               .show_btn{
                 width: 225px;
@@ -132,7 +136,7 @@
                 background-color: #978d04;
                 text-align: center;
                 border-radius: 15px;
-                right: 7px;
+                right: 3px;
                 position: relative;
                 bottom: 0;
 

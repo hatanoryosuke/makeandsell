@@ -26,7 +26,9 @@ class ItemsController < ApplicationController
   
   def destroy
     item = Item.find(params[:id])
-    item.destroy
+    comments = item.comments.includes(:user)
+    item.comments.destroy
+    
   end
   
   def edit

@@ -61,16 +61,18 @@
               = @items.size_h
             .sentence
               商品紹介 :
-              .item_name
-                = @items.text
-              
               -if current_user.id == @items.user_id
+                .sentence_in
+                  = @items.text
                 .show_btn
                   .show_btn_in
                     .edit
                       = link_to '編集', "/items/#{@items.id}/edit", method: :get
                     .destroy
                       = link_to '削除', "/items/#{@items.id}", method: :delete
+              - else
+                .item_name
+                  = @items.text
 
       .comment
         -if current_user
