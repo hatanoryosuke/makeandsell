@@ -30,32 +30,33 @@
   .mypage_icon
     = fa_icon 'user-circle', class: 'icon'
 
-.side_bar_show
-  .info
-    Category list
-  .side_bar_box
-    -@genre.each do |genre|
-      .side_bar_list
-        = genre.name
+.main
+  .side_bar_show
+    .info
+      Category list
+    .side_bar_box
+      -@genre.each do |genre|
+        .side_bar_list
+          = genre.name
       
-.contents
-  .contents_main
-    .contents_main_box
-      .contents_main_box__list
-        - @items.each do |items|
-          .contents_main_box__list__a
-            = link_to item_path(items.id) do
-              .contents_main_box__list__post{style:"background-image: url(#{items.image});"}
+  .contents_show
+    .contents_main
+      .contents_main_box
+        .contents_main_box__list
+          - @items.each do |items|
+            .contents_main_box__list__a
+              = link_to item_path(items.id) do
+                .contents_main_box__list__post{style:"background-image: url(#{items.image});"}
 
-              .contents_main_box__list__text
-                Item name :
-                .item_name
-                  = items.name
-              .price
-                Price
-                .price_a
-                  ¥
-                  = items.price.to_s(:delimited)
+                .contents_main_box__list__text
+                  Item name :
+                  .item_name
+                    = items.name
+                .price
+                  Price
+                  .price_a
+                    ¥
+                    = items.price.to_s(:delimited)
 .contents_low
   .info
     information

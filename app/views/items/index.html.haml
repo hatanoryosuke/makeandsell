@@ -17,42 +17,43 @@
         = link_to new_genre_path do
           genre
           = fa_icon 'leaf', class: 'icon'
- 
-.side_bar
-  .info
-    = form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form|
-      = form.text_field :keyword, placeholder: "検索", class: "info"
-      .search
-        %button.search{type: "submit"}
-          %i.icon
-            = fa_icon 'search'
-  .side_bar_box
-    Category
-    -@genres.each do |genre|
-      .side_bar_list
-        = genre.name
-      
-.contents
-  .contents_top
-    .list
-      Item list
-  .contents_main
-    .contents_main_box
-      .contents_main_box__list
-        - @items.each do |item|
-          .contents_main_box__list__a
-            = link_to "/items/#{item.id}", method: :get do
-              .contents_main_box__list__post{style:"background-image: url(#{item.image});"}
 
-              .contents_main_box__list__text
-                Item name :
-                .item_name
-                  = item.name
-              .price
-                Price
-                .price_a
-                  ¥
-                  = item.price.to_s(:delimited)
+.main
+  .side_bar
+    .info
+      = form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form|
+        = form.text_field :keyword, placeholder: "検索", class: "info"
+        .search
+          %button.search{type: "submit"}
+            %i.icon
+              = fa_icon 'search'
+    .side_bar_box
+      Category
+      -@genres.each do |genre|
+        .side_bar_list
+          = genre.name
+        
+  .contents
+    .contents_top
+      .list
+        Item list
+    .contents_main
+      .contents_main_box
+        .contents_main_box__list
+          - @items.each do |item|
+            .contents_main_box__list__a
+              = link_to "/items/#{item.id}", method: :get do
+                .contents_main_box__list__post{style:"background-image: url(#{item.image});"}
+
+                .contents_main_box__list__text
+                  Item name :
+                  .item_name
+                    = item.name
+                .price
+                  Price
+                  .price_a
+                    ¥
+                    = item.price.to_s(:delimited)
 .contents_low
   .info
     information
