@@ -28,19 +28,20 @@
           
           
           &__a{
-            
+            width: 316px;
+            border: solid 1px #afb4b1;
           }
 
             &__post{
               height: 338px;
-              width: 316px;
+              
               border: solid 1px #afb4b1;
               background-size: 100% 100%;
 
             }
 
             .evaluation{
-              width: 316px;
+              
               height: 90px;
               border: solid 1px #afb4b1;
               background-color: #fff;
@@ -115,7 +116,7 @@
             }
             .sentence{
               padding-left: 5px;
-              height: 280px;
+              height: 282px;
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
@@ -124,7 +125,7 @@
               overflow: auto;
               position: relative;
               .sentence_in{
-                height: 200px;
+                height: 205px;
                 overflow: auto;
               }
 

@@ -59,14 +59,14 @@ body{
   display: flex;
   .side_bar{
     float: left;
-    height: calc(100vh + 36px);
+    height: calc(100vh + 8px);
     width: 250px;
     
     .info{
       display: flex;
       justify-content: space-between;
       background-color: #fff;
-      width: 248px;
+      width: 245px;
       height: 30px;
       color: #afb4b1;
       // border: solid 1px;
@@ -89,7 +89,7 @@ body{
       width: 250px;
       background-color: #afb4b1;
       color: #f8fbfb;
-      border: solid 1px #afb4b1;
+      // border: solid 1px #afb4b1;
       font-size: 25px;
       overflow: auto;
       height: 100%;
@@ -105,21 +105,23 @@ body{
   }
   .contents{
     box-sizing: border-box;
-    width: calc(100vw - 248px);
+    width: calc(100vw - 250px);
     // margin-left: 252px;
     font-size-adjust: 18px;
+    background-image: url(https://images.unsplash.com/photo-1547998872-71a44f061d5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+    background-size: 100% 100%;
     
     .contents_top{
       text-align: center;
-      font-size: 50px;
-      height: 130px;
-      background-image: url(https://images.unsplash.com/photo-1547998872-71a44f061d5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
-      background-size: 100% 100%;
+      font-size: 70px;
+      height: 100px;
+      // background-image: url(https://images.unsplash.com/photo-1547998872-71a44f061d5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+      // background-size: 100% 100%;
       padding: 25px 25px;
       color: #fff;
       .list{
         position: relative;
-        top: 20px;
+        // top: 20px;
       }
 
       .p{
@@ -129,14 +131,14 @@ body{
     }
     .contents_main{
       height: calc(100vh - 110px);
-      width: calc(100vw - 250px);
+      width: calc(100vw - 335px);
+      margin:  0 auto;
       
-      // color: #f8fbfb;
       overflow-y: auto;
     
       .contents_main_box{
         width: 100%;
-        // background-color: #f8fbfb;
+        
 
         &__list{
           display: flex;
@@ -146,7 +148,9 @@ body{
           
           
           &__a{
-           width: 25%;
+            width: 191px;
+            margin: 5px 10px 15px 5px;
+            border: solid 5px #fff;
 
             a{
               text-decoration: none;
