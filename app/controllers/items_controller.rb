@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
     @comment = Comment.new
     @comments = @items.comments.includes(:user).order("created_at DESC")
     @price = @items.comments.where.not(price: nil).average(:price)
+    @max = @items.comments.where.not(price: nil).maximum(:price)
   end
   
   def destroy

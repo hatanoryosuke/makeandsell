@@ -37,10 +37,28 @@
                       ¥
                       = @price.round.to_s(:delimited)
                 - else
+                  .evaluation_box_price_no
+                    .evaluation_box_price_no__in
+                      No comment
+            .evaluation_max
+              .evaluation_box
+                .evaluation_box_text
+                  .evaluation_box_text_in
+                    最高評価額
+                -if @max.present? 
                   .evaluation_box_price
                     .evaluation_box_price__in
-                      
+                    ¥
+                    = @max.to_s(:delimited)
+                - else
+                  .evaluation_box_price
+                    .evaluation_box_price__in
+
           .show-contents_main_box__list__b
+            .show-contents_main_box__list__text
+              投稿者 :
+              = @items.user.name
+              さん
             .show-contents_main_box__list__text
               Item name :
               .item_name
@@ -79,11 +97,19 @@
             .comment_box
               .comment_box_text
                 = form.text_field :text, placeholder: "コメントする", rows: "2", class: "comment_box_text_in"
-              .comment_box_price
-                .comment_box_price_in
-                  = form.text_field :price, placeholder: "評価額を入力して下さい", class: "comment_box_price_in"
-                .comment_box_btn
-                  = form.submit "SEND", class: "btn"
+              -if current_user.id == @items.user_id
+                .comment_box_price
+                  .comment_box_price_in_a
+                    .text
+                      ※投稿者の商品評価額入力はできません
+                  .comment_box_btn
+                    = form.submit "SEND", class: "btn"
+              -else
+                .comment_box_price
+                  .comment_box_price_in
+                    = form.text_field :price, placeholder: "評価額を入力して下さい", class: "comment_box_price_in"
+                  .comment_box_btn
+                    = form.submit "SEND", class: "btn"
               
     -if @comments.present? 
       .message

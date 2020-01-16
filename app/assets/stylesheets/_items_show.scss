@@ -4,15 +4,14 @@
   color: #fff;
   text-align: center;
   font-size: 70px;
-  height: 900px;
+  height: 950px;
   
 
   .show-contents_main{
-    height: 700px;
+    height: 750px;
     width: 100vw;
     display: flex;
     justify-content: center;
-    overflow: auto;
 
     .show-contents_main_in{
       width: 570px;
@@ -34,16 +33,14 @@
 
             &__post{
               height: 338px;
-              
               border: solid 1px #afb4b1;
               background-size: 100% 100%;
 
             }
 
             .evaluation{
-              
               height: 90px;
-              border: solid 1px #afb4b1;
+              // border: solid 1px #afb4b1;
               background-color: #fff;
               color: #000000;
               font-size: 17px;
@@ -61,6 +58,48 @@
                   font-size: 35px;
                   &__in{
                     // margin-left: 17px;
+                  }
+                }
+                .evaluation_box_price_no{
+                  border: solid 1px #afb4b1;
+                  height: 56px;
+                  text-align: center;
+                  font-size: 20px;
+                  &__in{
+                    margin-top: 17px;
+                  }
+                }
+              }
+            }
+
+            .evaluation_max{
+              height: 50px;
+              // border: solid 1px #afb4b1;
+              background-color: #fff;
+              color: #000000;
+              font-size: 17px;
+              
+              .evaluation_box{
+                width: 100%;
+                display: flex;
+                .evaluation_box_text{
+                  width: 100px;
+                  height: 48px;
+                  background-color: #ecc0ae;
+                  border: solid 1px #afb4b1;
+                  .evaluation_box_text_in{
+                    position: relative;
+                    top: 12px;
+                  }
+                }
+                .evaluation_box_price{
+                  border: solid 1px #afb4b1;
+                  width: 216px;
+                  height: 48px;
+                  text-align: center;
+                  font-size: 35px;
+                  &__in{
+                    margin-top: -5px;
                   }
                 }
               }
@@ -116,7 +155,7 @@
             }
             .sentence{
               padding-left: 5px;
-              height: 282px;
+              height: 287px;
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
@@ -125,7 +164,7 @@
               overflow: auto;
               position: relative;
               .sentence_in{
-                height: 205px;
+                height: 208px;
                 overflow: auto;
               }
 
@@ -197,6 +236,18 @@
           .comment_box_price{
             display: flex;
             
+            .comment_box_price_in_a{
+              width: 300px;
+              height: 50px;
+              margin: 5px 33px 0 53px;
+              font-size: 16px;
+              border-radius: 20px ;
+              border: solid 2px #f8fbfb;
+              .text{
+                position: relative;
+                top: 12px;
+              }
+            }
             input.comment_box_price_in{
               width: 300px;
               height: 50px;
@@ -232,11 +283,8 @@
         margin-left: 20px;
         .message_in{
           width: 300px;
-          height: 668px;
+          height: 718px;
           border: solid 5px #fff;
-          // margin-left: 20px;
-          // position: relative;
-          // right: 60px;
           border-radius: 20px;
           color: #fff;
           font-size: 20px;
