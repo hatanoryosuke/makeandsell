@@ -7,6 +7,7 @@ body{
     display: flex;
     background-color: #4b4f54;
     color: #f8fbfb;
+    text-shadow:4px 4px 8px #0a0a0a6b;
     height: 100px;
     justify-content: space-between;
 
@@ -66,7 +67,7 @@ body{
       display: flex;
       justify-content: space-between;
       background-color: #fff;
-      width: 245px;
+      width: 246px;
       height: 30px;
       color: #afb4b1;
       // border: solid 1px;
@@ -119,6 +120,7 @@ body{
       // background-size: 100% 100%;
       padding: 25px 25px;
       color: #fff;
+      text-shadow:4px 4px 8px #0a0a0a;
       .list{
         position: relative;
         // top: 20px;
@@ -132,20 +134,16 @@ body{
     .contents_main{
       height: calc(100vh - 110px);
       width: calc(100vw - 335px);
-      margin:  0 auto;
-      
+      margin: 0 7% auto;
       overflow-y: auto;
     
       .contents_main_box{
         width: 100%;
         
-
         &__list{
           display: flex;
           flex-wrap: wrap;
           // justify-content: space-around;
-          
-          
           
           &__a{
             width: 191px;

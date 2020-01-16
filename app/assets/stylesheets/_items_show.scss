@@ -5,13 +5,16 @@
   text-align: center;
   font-size: 70px;
   height: 950px;
-  
+  .show-contents_title{
+    text-shadow:4px 4px 8px #0a0a0a;
+  }
 
   .show-contents_main{
     height: 750px;
     width: 100vw;
     display: flex;
     justify-content: center;
+    
 
     .show-contents_main_in{
       width: 570px;
@@ -19,6 +22,7 @@
       .show-contents_main_box{
         // width: 100%;
         border: solid 5px #fff;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.808);
 
         &__list{
           display: flex;
@@ -75,8 +79,8 @@
             .evaluation_max{
               height: 50px;
               // border: solid 1px #afb4b1;
-              background-color: #fff;
-              color: #000000;
+              background-color: #978d04;
+              color: #fff;
               font-size: 17px;
               
               .evaluation_box{
@@ -85,15 +89,16 @@
                 .evaluation_box_text{
                   width: 100px;
                   height: 48px;
-                  background-color: #ecc0ae;
-                  border: solid 1px #afb4b1;
+                  // background-color: #978d04;
+                  // color: #fff;
+                  // border: solid 1px #afb4b1;
                   .evaluation_box_text_in{
                     position: relative;
                     top: 12px;
                   }
                 }
                 .evaluation_box_price{
-                  border: solid 1px #afb4b1;
+                  // border: solid 1px #afb4b1;
                   width: 216px;
                   height: 48px;
                   text-align: center;
@@ -139,7 +144,7 @@
                 font-size: 35px;
                 position: relative;
                 top: -10px;
-                left: 10px;
+                text-align: center;
               }
             }
             .size{
@@ -219,11 +224,10 @@
         width: 560px;
         height: 200px;
         margin: 25px auto 10px;
-        // background-color: #afb4b1;
         font-size: 20px;
         border: solid 5px #fff;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.808);
         .comment_box{
-          
           .comment_box_text{
             .comment_box_text_in{
               width: 450px;
@@ -291,9 +295,10 @@
           text-align: left;
           overflow: auto;
           overflow-wrap: break-word;
-          
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.808);
           .message_list{
             width: 300px;
+            
             a{
               text-decoration: none;
               color: #fff;
@@ -303,7 +308,7 @@
               overflow-wrap: break-word;
               padding: 0 10px;
               text-align: center;
-              
+              box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.808);
             }
             .message_list_box{
               margin: 5px;
@@ -321,6 +326,7 @@
               border-radius: 20px;
               color: #000000;
               padding: 0 10px;
+              box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.808);
               .message_list_box_in{
                 position: relative;
                 left: 5px;
@@ -359,5 +365,6 @@
   .show-icon{
     font-size: 40px;
     color: #fff;
+    text-shadow:4px 4px 8px #0a0a0a;
   }
 }

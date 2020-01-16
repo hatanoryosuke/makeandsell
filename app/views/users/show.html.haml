@@ -24,22 +24,34 @@
           User edit
           = fa_icon 'id-badge', class: 'icon'
 
-.mypage
-  .mypage_top
-    = "My page: #{current_user.name}"
-  .mypage_icon
-    = fa_icon 'user-circle', class: 'icon'
+-# .mypage
+-#   .mypage_top
+-#     = "My page: #{current_user.name}"
+-#   .mypage_icon
+-#     = fa_icon 'user-circle', class: 'icon'
 
 .main
   .side_bar_show
     .info
-      Category list
+      = form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form|
+        = form.text_field :keyword, placeholder: "検索", class: "info"
+        .search
+          %button.search{type: "submit"}
+            %i.icon
+              = fa_icon 'search'
     .side_bar_box
-      -@genre.each do |genre|
+      Category
+      -@genres.each do |genre|
         .side_bar_list
           = genre.name
-      
+        
   .contents_show
+    .mypage
+      .mypage_top
+        = "My page: #{current_user.name}"
+      .mypage_icon
+        = fa_icon 'user-circle', class: 'icon'
+
     .contents_main
       .contents_main_box
         .contents_main_box__list

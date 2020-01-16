@@ -6,7 +6,7 @@
   .heder_content
     %ul.heder_content_left
       %li.list
-        = link_to current_user.name,  user_path(current_user.id)
+        = link_to current_user.name, user_path(current_user.id)
         = fa_icon 'user-circle', class: 'icon'
     %ul.heder_content_left
       %li.list
@@ -20,7 +20,8 @@
           = fa_icon 'leaf', class: 'icon'
 
 .show-contents
-  Details & Comment
+  .show-contents_title
+    Details & Comment
   .show-contents_main
     .show-contents_main_in
       .show-contents_main_box
@@ -101,7 +102,7 @@
                 .comment_box_price
                   .comment_box_price_in_a
                     .text
-                      ※投稿者の商品評価額入力はできません
+                      ※投稿者の商品評価額は入力できません
                   .comment_box_btn
                     = form.submit "SEND", class: "btn"
               -else
