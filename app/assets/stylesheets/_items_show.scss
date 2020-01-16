@@ -328,7 +328,7 @@
                 justify-content: space-between;
 
                 a{
-                  width: 30px;
+                  // width: 10px;
                   height: 22px;
                   font-size: 15px;
                   padding: 0 10px;
@@ -336,7 +336,7 @@
                   position: relative;
                   top: 6px;
                   right: 5px;
-                  
+                  border-radius: 50%;
                 }
                 
               }

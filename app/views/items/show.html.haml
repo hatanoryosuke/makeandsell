@@ -126,7 +126,7 @@
                     comment
                   -if current_user.id == comment.user_id
                     .destroy_text
-                    = link_to '削除', "/items/:item_id/comments/#{comment.id}", method: :delete
+                    = link_to '✖︎', "/items/:item_id/comments/#{comment.id}", method: :delete
                 .message_list_in_text
                   = comment.text
                 -if comment.price.present? 
