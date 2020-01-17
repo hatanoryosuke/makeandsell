@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
 
   def show
-    @user = current_user
-    @items = current_user.items.order("created_at DESC")
+    @user = User.find(params[:id])
+    @items = @user.items.order("created_at DESC")
     @genres = Genre.all
-    @genre = Genre.all
   end
 
   def edit

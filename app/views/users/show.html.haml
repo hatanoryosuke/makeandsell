@@ -48,7 +48,8 @@
   .contents_show
     .mypage
       .mypage_top
-        = "My page: #{current_user.name}"
+        -# = "My page: #{@user.name}"
+        = @user.name
       .mypage_icon
         = fa_icon 'user-circle', class: 'icon'
 
