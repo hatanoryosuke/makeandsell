@@ -23,11 +23,13 @@ class ItemsController < ApplicationController
     @comments = @items.comments.includes(:user).order("created_at DESC")
     @price = @items.comments.where.not(price: nil).average(:price)
     @max = @items.comments.where.not(price: nil).maximum(:price)
+    @low = @items.comments.where.not(price: nil).minimum(:price)
+    @count = @items.comments.where.not(text: nil).count
+    @evaluation = @items.comments.where.not(price: nil).count
   end
   
   def destroy
     item = Item.find(params[:id])
-    
     item.destroy
     
   end

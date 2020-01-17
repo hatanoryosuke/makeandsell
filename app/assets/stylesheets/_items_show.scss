@@ -78,33 +78,34 @@
 
             .evaluation_max{
               height: 50px;
-              // border: solid 1px #afb4b1;
               background-color: #978d04;
               color: #fff;
-              font-size: 17px;
-              
+              font-size: 15px;
+              text-align: center;
               .evaluation_box{
-                width: 100%;
+                width: 300px;
+                position: relative;
+                top: 12px;
+                text-align: center;
                 display: flex;
+                justify-content: space-evenly;
                 .evaluation_box_text{
-                  width: 100px;
-                  height: 48px;
-                  // background-color: #978d04;
-                  // color: #fff;
-                  // border: solid 1px #afb4b1;
+                  display: flex;
+                  
                   .evaluation_box_text_in{
+                    font-size: 22px;
                     position: relative;
-                    top: 12px;
+                    top: -7px;
+                    left: 7px;
                   }
                 }
                 .evaluation_box_price{
-                  // border: solid 1px #afb4b1;
-                  width: 216px;
-                  height: 48px;
-                  text-align: center;
-                  font-size: 35px;
-                  &__in{
-                    margin-top: -5px;
+                  display: flex;
+                  .evaluation_box_price__in{
+                    font-size: 22px;
+                    position: relative;
+                    top: -7px;
+                    left: 7px;
                   }
                 }
               }
@@ -285,9 +286,74 @@
   }
       .message{
         margin-left: 20px;
+
+        .evaluation_list{
+          display: flex;
+          justify-content: space-around;
+          font-size: 21px;
+          .evaluation_max{
+            width: 120px;
+            height: 120px;
+            background-color: #e96b8a;
+            color: #fff;
+            
+            border-radius: 50%;
+            border: solid 5px rgba(255, 255, 255, 0.616);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.808);
+            .evaluation_box{
+              width: 100%;
+              .evaluation_box_text{
+                height: 48px;
+                .evaluation_box_text_in{
+                  position: relative;
+                  top: 25px;
+                }
+              }
+              .evaluation_box_price{
+                height: 48px;
+                text-align: center;
+                font-size: 27px;
+                margin-top: 5px;
+                &__in{
+                  margin-top: -5px;
+                }
+              }
+            }
+          }
+          .evaluation_low{
+            width: 120px;
+            height: 120px;
+            background-color: #49ade7;
+            color: #fff;
+            
+            border-radius: 50%;
+            border: solid 5px rgba(255, 255, 255, 0.616);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.808);
+            .evaluation_box{
+              width: 100%;
+              .evaluation_box_text{
+                height: 48px;
+                .evaluation_box_text_in{
+                  position: relative;
+                  top: 25px;
+                }
+              }
+              .evaluation_box_price{
+                height: 48px;
+                text-align: center;
+                font-size: 27px;
+                margin-top: 5px;
+                &__in{
+                  margin-top: -5px;
+                }
+              }
+            }
+          }
+        }
+
         .message_in{
           width: 300px;
-          height: 718px;
+          height: 580px;
           border: solid 5px #fff;
           border-radius: 20px;
           color: #fff;
@@ -296,9 +362,10 @@
           overflow: auto;
           overflow-wrap: break-word;
           box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.808);
+          margin-top: 10px;
           .message_list{
             width: 300px;
-            
+            padding-bottom: 5px;
             a{
               text-decoration: none;
               color: #fff;

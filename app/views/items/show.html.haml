@@ -44,16 +44,13 @@
             .evaluation_max
               .evaluation_box
                 .evaluation_box_text
+                  コメント数 : 
                   .evaluation_box_text_in
-                    最高評価額
-                -if @max.present? 
-                  .evaluation_box_price
-                    .evaluation_box_price__in
-                    ¥
-                    = @max.to_s(:delimited)
-                - else
-                  .evaluation_box_price
-                    .evaluation_box_price__in
+                    = @count
+                .evaluation_box_price
+                  評価数 :
+                  .evaluation_box_price__in
+                    = @evaluation
 
           .show-contents_main_box__list__b
             .show-contents_main_box__list__text
@@ -114,6 +111,35 @@
               
     -if @comments.present? 
       .message
+        .evaluation_list
+          .evaluation_max
+            .evaluation_box
+              .evaluation_box_text
+                .evaluation_box_text_in
+                  Max price
+              -if @max.present? 
+                .evaluation_box_price
+                  .evaluation_box_price__in
+                  ¥
+                  = @max.to_s(:delimited)
+              - else
+                .evaluation_box_price
+                  .evaluation_box_price__in
+
+          .evaluation_low
+            .evaluation_box
+              .evaluation_box_text
+                .evaluation_box_text_in
+                  Lowest price
+              -if @low.present? 
+                .evaluation_box_price
+                  .evaluation_box_price__in
+                  ¥
+                  = @low.to_s(:delimited)
+              - else
+                .evaluation_box_price
+                  .evaluation_box_price__in
+      
         .message_in
           - @comments.each do |comment|
             .message_list
