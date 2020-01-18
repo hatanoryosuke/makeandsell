@@ -1,0 +1,25 @@
+.heder
+  .heder_left
+    .heder_left_name
+      = link_to root_path do
+        Make&Sell
+  .heder_content
+    .heder_content_left
+      .list
+        = link_to current_user.name,  user_path(current_user.id)
+        = fa_icon 'user-circle', class: 'icon'
+    .heder_content_left
+      .list
+        = link_to new_item_path do
+          item 
+          = fa_icon 'image', class: 'icon'
+    .heder_content_center
+      .list
+        = link_to new_genre_path do
+          genre
+          = fa_icon 'leaf', class: 'icon'
+    .heder_content_right
+      .list
+        = link_to edit_user_path(current_user) do
+          User edit
+          = fa_icon 'id-badge', class: 'icon'

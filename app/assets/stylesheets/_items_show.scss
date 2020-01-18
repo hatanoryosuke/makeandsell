@@ -82,6 +82,7 @@
               color: #fff;
               font-size: 15px;
               text-align: center;
+              border: solid 1px #afb4b1;
               .evaluation_box{
                 width: 300px;
                 position: relative;
@@ -161,7 +162,7 @@
             }
             .sentence{
               padding-left: 5px;
-              height: 287px;
+              height: 289px;
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
@@ -294,7 +295,7 @@
           .evaluation_max{
             width: 120px;
             height: 120px;
-            background-color: #e96b8a;
+            background-color: #e6416a;
             color: #fff;
             
             border-radius: 50%;
@@ -323,7 +324,7 @@
           .evaluation_low{
             width: 120px;
             height: 120px;
-            background-color: #49ade7;
+            background-color: #269ee4;
             color: #fff;
             
             border-radius: 50%;

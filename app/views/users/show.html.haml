@@ -1,49 +1,8 @@
-.heder
-  .heder_left
-    .heder_left_name
-      = link_to root_path do
-        Make&Sell
-  .heder_content
-    %ul.heder_content_left
-      %li.list
-        = link_to current_user.name,  user_path(current_user.id)
-        = fa_icon 'user-circle', class: 'icon'
-    %ul.heder_content_left
-      %li.list
-        = link_to new_item_path do
-          item 
-          = fa_icon 'image', class: 'icon'
-    %ul.heder_content_center
-      %li.list
-        = link_to new_genre_path do
-          genre
-          = fa_icon 'leaf', class: 'icon'
-    %ul.heder_content_right
-      %li.list
-        = link_to edit_user_path(current_user) do
-          User edit
-          = fa_icon 'id-badge', class: 'icon'
-
--# .mypage
--#   .mypage_top
--#     = "My page: #{current_user.name}"
--#   .mypage_icon
--#     = fa_icon 'user-circle', class: 'icon'
+.top
+  = render "shared/header"
 
 .main
-  .side_bar_show
-    .info
-      = form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form|
-        = form.text_field :keyword, placeholder: "検索", class: "info"
-        .search
-          %button.search{type: "submit"}
-            %i.icon
-              = fa_icon 'search'
-    .side_bar_box
-      Category
-      -@genres.each do |genre|
-        .side_bar_list
-          = genre.name
+  = render "shared/side_bar"
         
   .contents_show
     .mypage

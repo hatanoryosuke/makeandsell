@@ -3,20 +3,25 @@
     .heder_left_name
       Make&Sell
   .heder_content
-    %ul.heder_content_left
-      %li.list
+    .heder_content_left
+      .list
         = link_to current_user.name,  user_path(current_user.id)
         = fa_icon 'user-circle', class: 'icon'
-    %ul.heder_content_left
-      %li.list
+    .heder_content_left
+      .list
         = link_to new_item_path do
           item 
           = fa_icon 'image', class: 'icon'
-    %ul.heder_content_center
-      %li.list
+    .heder_content_center
+      .list
         = link_to new_genre_path do
           genre
           = fa_icon 'leaf', class: 'icon'
+    .heder_content_right
+      .list
+        = link_to edit_user_path(current_user) do
+          User edit
+          = fa_icon 'id-badge', class: 'icon'
 
 .main
   .side_bar

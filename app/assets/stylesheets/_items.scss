@@ -36,16 +36,13 @@ body{
       li{
         font-size: 18px;
       }
-
     }
     .heder_content_center {
       margin-right: 10px;;
-
     }
 
     .heder_content_right {
       margin-right: 10px;;
-
     }
 
     a{
@@ -81,9 +78,7 @@ body{
        color: #afb4b1;
        cursor: pointer;
       }
-
     }
-
 
     .side_bar_box{
       align-items: center;;
@@ -107,7 +102,6 @@ body{
   .contents{
     box-sizing: border-box;
     width: calc(100vw - 250px);
-    // margin-left: 252px;
     font-size-adjust: 18px;
     background-image: url(https://images.unsplash.com/photo-1547998872-71a44f061d5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
     background-size: 100% 100%;
@@ -155,7 +149,7 @@ body{
               text-decoration: none;
             }
           
-            &__post{
+            .contents_main_box__list__post{
               height: 210px;
               border: solid 1px #afb4b1;
               background-size: 100% 100%;

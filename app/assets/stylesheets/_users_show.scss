@@ -72,11 +72,11 @@
       }
 
       .mypage_icon{
-        font-size: 100px;
+        font-size: 90px;
         position: relative;
-        top: 12px;
-        margin: 0 20px;
+        top: 3px;
         color: #fff;
+        left: 10px;
       }
     }
     .contents_main{
@@ -104,7 +104,7 @@
               text-decoration: none;
             }
           
-            &__post{
+            .contents_main_box__list__post{
               height: 210px;
               border: solid 1px #afb4b1;
               background-size: 100% 100%;

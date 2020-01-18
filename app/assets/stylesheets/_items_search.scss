@@ -1,112 +1,117 @@
-.search_top{
-  width: 100%;
-  height: 200px;
-  background-image: url(https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
-  color: #fff;
-  background-size: 100% 100%;
+.main{
   display: flex;
-  justify-content: center;
-  &__list{
-    font-size: 50px;
-    position: relative;
-    top: 27px;
+  .side_search{
+    float: left;
+    height: calc(100vh + 8px);
+    width: 250px;
+    
+    .info{
+      display: flex;
+      justify-content: space-between;
+      background-color: #fff;
+      width: 246px;
+      height: 30px;
+      color: #afb4b1;
+      // border: solid 1px;
+      position: absolute;
+      .search{
+       font-size: 18px;
+       position: relative;
+       left: 106px;
+       top: 1px;
+       border-radius: 50%;
+       color: #afb4b1;
+       cursor: pointer;
+      }
+    }
+
+    .side_bar_box{
+      align-items: center;;
+      width: 250px;
+      background-color: #afb4b1;
+      color: #f8fbfb;
+      // border: solid 1px #afb4b1;
+      font-size: 25px;
+      overflow: auto;
+      height: 100%;
+      position: relative;
+      top: 32px;
+      
+      .side_bar_list{
+        padding: 3px 25px 3px;
+        font-size: 16px;
+        
+      }
+    }
   }
 
-    &__icon{
-      
-      font-size: 50px;
+  .contents_search{
+    box-sizing: border-box;
+    width: calc(100vw - 250px);
+    background-image: url(https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+    background-size: 100% 100%;
+    
+    .search_top__list{
+      text-align: center;
+      height: 100px;
+      font-size: 70px;
+      display: flex;
+      justify-content: center;
+      padding: 25px 25px;
+      color: #fff;
+      text-shadow:4px 4px 8px #0a0a0a;
+    }
+
+    .search_top__icon{
+      font-size: 70px;
       position: relative;
-      top: 30px;
+      // top: 30px;
       margin: 0 20px;
     }
-}
-.side_search{
-  float: left;
-  height: calc(100vh - 144px);
-  
-  .info{
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    width: 250px;
-    height: 30px;
-    color: #afb4b1;
-    border: solid 1px;
-    position: absolute;
-    .search{
-     font-size: 18px;
-     position: relative;
-     left: 106px;
-     top: 1px;
-     border-radius: 50%;
-     color: #afb4b1;
-     cursor: pointer;
-    }
-
-  }
-
-
-  .side_bar_box{
-    align-items: center;;
-    width: 250px;
-    background-color: #afb4b1;
-    color: #f8fbfb;
-    border: solid 1px #afb4b1;
-    font-size: 25px;
-    overflow: auto;
-    height: 100%;
-    position: relative;
-    top: 32px;
-    
-    .side_bar_list{
-      padding: 3px 25px 3px;
-      font-size: 16px;
-      
-    }
-  }
-}
 
     .contents_main{
       height: calc(100vh - 110px);
-      width: calc(100vw - 250px);
-      
-      // color: #f8fbfb;
+      width: calc(100vw - 335px);
+      margin: 0 7% auto;
       overflow-y: auto;
     
       .contents_main_box{
         width: 100%;
-        // background-color: #f8fbfb;
-
+        
         &__list{
           display: flex;
           flex-wrap: wrap;
           // justify-content: space-around;
-          width: 100%;
-          
           
           &__a{
-          width: 25%;
-          //  height: 330px;
-          //  padding-bottom: 6px;
-          }
-            &__post{
+            width: 191px;
+            margin: 5px 10px 15px 5px;
+            border: solid 5px #fff;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.808);
+
+            a{
+              text-decoration: none;
+            }
+          
+            .contents_main_box__list__post{
               height: 210px;
               border: solid 1px #afb4b1;
               background-size: 100% 100%;
               // background-position: center;
               // background-repeat: no-repeat;
               // background-size: contain;
-              
             }
 
-            &__text{
+            .contents_main_box__list__text{
               display: flex;
               padding-left: 5px;
               height: 30px;
-              
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
+              overflow:hidden;
+              text-overflow: ellipsis;
+              white-space:nowrap;
             }
             
             .price{
@@ -116,13 +121,16 @@
               color: black;
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
-
+              overflow:hidden;
+              text-overflow: ellipsis;
+              white-space:nowrap;
               .price_a{
                 font-size: 35px;
               }
-            
             }
+          }
         }
       }
     }
-  
+  }
+}
