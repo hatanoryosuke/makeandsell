@@ -73,3 +73,7 @@ gem 'mini_magick'
 gem 'fog-aws'
 gem 'font-awesome-sass'
 gem 'erb2haml'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
