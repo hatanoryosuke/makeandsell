@@ -79,7 +79,7 @@
               商品紹介 :
               -if current_user.id == @items.user_id
                 .sentence_in
-                  = @items.text
+                  = simple_format(@items.text)
                 .show_btn
                   .show_btn_in
                     .edit
