@@ -87,7 +87,8 @@
                     .destroy
                       = link_to '削除', "/items/#{@items.id}", method: :delete
               - else
-                = @items.text
+                .sentence_in
+                  = simple_format(@items.text)
 
       .comment
         -if current_user
