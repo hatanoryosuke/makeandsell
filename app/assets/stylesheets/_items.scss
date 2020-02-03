@@ -166,8 +166,17 @@ body{
               border: solid 1px #afb4b1;
               background-color: #f8fbfb;
               overflow:hidden;
+              .text{
+                width: 79px;
+              }
+              .item_name{
+              overflow:hidden;
               text-overflow: ellipsis;
               white-space:nowrap;
+              position: relative;
+              left: 5px;
+              width: 100px;
+              }
             }
             
             .price{

@@ -1,23 +1,5 @@
-.heder
-  .heder_left
-    .heder_left_name
-      = link_to root_path do
-        Make&Sell
-  .heder_content
-    %ul.heder_content_left
-      %li.list
-        = link_to current_user.name, user_path(current_user.id)
-        = fa_icon 'user-circle', class: 'icon'
-    %ul.heder_content_left
-      %li.list
-        = link_to new_item_path do
-          item 
-          = fa_icon 'image', class: 'icon'
-    %ul.heder_content_center
-      %li.list
-        = link_to new_genre_path do
-          genre
-          = fa_icon 'leaf', class: 'icon'
+.top
+  = render "shared/header"
 
 .show-contents
   .show-contents_title
@@ -148,7 +130,7 @@
                 %strong
                   -# user name :
                   = link_to comment.user.name, "/users/#{comment.user.id}"
-              .message_list_box_a
+              .message_list_box_low
                 .message_list_box_in
                   .message_list_comment
                     comment

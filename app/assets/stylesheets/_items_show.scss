@@ -126,6 +126,9 @@
               overflow: auto;
               text-overflow: ellipsis;
               white-space: nowrap;
+              .item_name{
+                padding-left: 5px;
+              }
             }
             
             .price{
@@ -376,7 +379,6 @@
               overflow-wrap: break-word;
               padding: 0 10px;
               text-align: center;
-              box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.808);
             }
             .message_list_box{
               margin: 5px;
@@ -387,7 +389,7 @@
                 left: 5px;
               }
             }
-            .message_list_box_a{
+            .message_list_box_low{
               width: 250px;
               margin: 5px auto;
               background-color: #fff;
