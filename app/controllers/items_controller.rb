@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   def search
     @items = Item.search(params[:keyword])
-    @genre = Genre.all
+    # @genre = Genre.all
   end
 
   def show
@@ -45,7 +45,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:price, :name, :image, :size_w, :size_d, :size_h, :text,).merge(user_id: current_user.id)
+    params.require(:item).permit(:price, :name, :image, :size_w, :size_d, :size_h, :text,{genre_ids:[]}).merge(user_id: current_user.id)
   end
-  
+
 end

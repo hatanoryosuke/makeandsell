@@ -139,7 +139,7 @@ body{
           flex-wrap: wrap;
           // justify-content: space-around;
           
-          &__a{
+          &__frame{
             width: 191px;
             margin: 5px 10px 15px 5px;
             border: solid 5px #fff;
@@ -189,7 +189,7 @@ body{
               overflow:hidden;
               text-overflow: ellipsis;
               white-space:nowrap;
-              .price_a{
+              .price_in{
                 font-size: 35px;
               }
             }

@@ -46,7 +46,7 @@
       .contents_main_box
         .contents_main_box__list
           - @items.each do |item|
-            .contents_main_box__list__a
+            .contents_main_box__list__frame
               = link_to "/items/#{item.id}", method: :get do
                 .contents_main_box__list__post{style:"background-image: url(#{item.image});"}
 
@@ -57,7 +57,7 @@
                     = item.name
                 .price
                   Price
-                  .price_a
+                  .price_in
                     ¥
                     = item.price.to_s(:delimited)
 .contents_low

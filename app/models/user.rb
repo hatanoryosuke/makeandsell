@@ -4,8 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-         has_many :genre_items
-         has_many :genres, through: :genre_items
          has_many :items
          has_many :comments
         end
