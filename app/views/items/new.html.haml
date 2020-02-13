@@ -39,6 +39,7 @@
               = form.text_area :text, placeholder: "紹介文を入力して下さい ※200文字以内", class: "input"
           .genre
             ジャンル：
-            = form.collection_check_boxes :genre_ids, Genre.all, :id, :name
+            .genre_in
+              = form.collection_check_boxes :genre_ids, Genre.all, :id, :name
           .btn
             = form.submit "SEND"

@@ -47,6 +47,17 @@
             height: 150px;
           }
         }
+        .genre{
+          width: 500px;
+          overflow-wrap: break-word;
+          .genre_in{
+            input{
+              position: relative;
+              top: -3px;
+              margin: 0 5px;
+            }
+          }
+        }
       }
     }
   }
