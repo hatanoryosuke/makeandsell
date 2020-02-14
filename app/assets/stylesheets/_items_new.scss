@@ -1,6 +1,6 @@
 .item_new{
   width: 100%;
-  height: 900px;
+  // height: 900px;
   background-image: url(https://images.unsplash.com/photo-1501516069922-a9982bd6f3bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
   color: #fff;
   background-size: 100% 100%;
@@ -30,6 +30,14 @@
         }
         .btn{
           padding: 20px;
+          text-align: center;
+          input{
+            width: 150px;
+            height: 32px;
+            background-color: #978d04;
+            color: #fff;
+            border-radius: 30px;
+          }
         }
         .size_w{
           padding: 20px;
@@ -48,7 +56,8 @@
           }
         }
         .genre{
-          width: 500px;
+          width: 400px;
+          padding: 20px;
           overflow-wrap: break-word;
           .genre_in{
             input{
