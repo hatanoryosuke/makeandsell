@@ -1,0 +1,20 @@
+.top
+  = render "shared/header"
+
+.main
+  = render "shared/side_bar"
+  .contents
+    .contents_top
+      .genre
+        List :
+        = @genre.name
+    .item
+      = render "shared/contents_main"
+.contents_low
+  .info
+    information
+  .icon
+    = fa_icon 'facebook', class: 'icon'
+    = fa_icon 'twitter', class: 'icon'
+    = fa_icon 'google', class: 'icon'
+    = fa_icon 'pinterest', class: 'icon'

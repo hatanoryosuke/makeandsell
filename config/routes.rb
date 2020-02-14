@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:edit, :update, :show]do
   end
-  resources :genres, only: [:new, :create, :edit, :update]
+  resources :genres, only: [:new, :create, :edit, :update, :show]
 
 
 end

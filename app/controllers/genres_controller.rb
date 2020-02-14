@@ -30,6 +30,13 @@ class GenresController < ApplicationController
     end
   end
 
+  def show
+    @genre = Genre.find(params[:id])
+    @items = @genre.items.order("created_at DESC")
+    @genres = Genre.all
+  end
+
+
   private
     def genre_params
       params.require(:genres).permit(:name)

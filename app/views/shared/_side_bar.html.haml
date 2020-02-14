@@ -10,5 +10,4 @@
     Category
     -@genres.each do |genre|
       .side_bar_list
-        = genre.name
-        -# = link_to "/genres/#{genre.id}", method: :get do
+        = link_to genre.name, "/genres/#{genre.id}"
