@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   def search
     @items = Item.search(params[:keyword])
-    # @genre = Genre.all
+    @genres = Genre.all
   end
 
   def show

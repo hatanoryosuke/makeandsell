@@ -1,0 +1,32 @@
+.item_new_create
+  .container
+    = form_with(model: @items,method: :post, local: true) do |form|
+      .list
+        .image
+          = form.label :image,"商品画像" 
+          = form.file_field :image
+        .name
+          商品名：
+          = form.text_field :name, placeholder: "Item name" , rows: "2"
+        .price
+          金額：
+          = form.text_field :price, placeholder: "Item price"
+        .size_w
+          幅：
+          = form.text_field :size_w, placeholder: "幅"
+        .size_d
+          奥行：
+          = form.text_field :size_d, placeholder: "奥行"
+        .size_h
+          高さ：
+          = form.text_field :size_h, placeholder: "高さ"
+        .text
+          紹介文：
+          .input
+            = form.text_area :text, placeholder: "紹介文を入力して下さい ※200文字以内", class: "input"
+        .genre
+          ジャンル：
+          .genre_in
+            = form.collection_check_boxes :genre_ids, Genre.all, :id, :name
+        .btn
+          = form.submit "SEND"
