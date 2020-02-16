@@ -28,17 +28,7 @@
         .price{
           padding: 20px;
         }
-        .btn{
-          padding: 20px;
-          text-align: center;
-          input{
-            width: 150px;
-            height: 32px;
-            background-color: #978d04;
-            color: #fff;
-            border-radius: 30px;
-          }
-        }
+
         .size_w{
           padding: 20px;
         }
@@ -65,6 +55,17 @@
               top: -3px;
               margin: 0 5px;
             }
+          }
+        }
+        .btn{
+          padding: 20px;
+          text-align: center;
+          input{
+            width: 150px;
+            height: 32px;
+            background-color: #978d04;
+            color: #fff;
+            border-radius: 30px;
           }
         }
       }

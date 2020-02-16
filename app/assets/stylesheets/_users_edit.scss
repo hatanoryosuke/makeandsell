@@ -13,9 +13,40 @@
       .list{
         font-size: 35px;
         .log{
-
+          display: flex;
+          justify-content: center;
+          margin-top: 16px;
+          .log_box{
+            margin: 0 10px;
+            width: 150px;
+            height: 32px;
+            background-color: #7d7e7a57;
+            border-radius: 30px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+            border-image: initial;
+            }
+          
+          a{
+            position: relative;
+            top: -16px;
+          }
         }
       }
+    }
+  }
+}
+.actions{
+  .btn{
+    margin-top: 20px;
+    input{
+      width: 150px;
+      height: 32px;
+      background-color: #dfe0d9ee;
+      // color: #fff;
+      border-radius: 30px;
+      cursor: pointer;
     }
   }
 }

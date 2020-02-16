@@ -6,8 +6,10 @@
         .list
           %h5 アカウントの編集
           .log
-            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
-            = link_to "TOPに戻る", :back, class: 'btn'
+            .log_box
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+            .log_box
+              = link_to "TOPに戻る", root_path, class: 'btn'
     .account-page__inner--right.user-form
       = form_for(current_user) do |f|
         .field
@@ -21,4 +23,5 @@
           .field-input
             = f.email_field :email
         .actions
-          = f.submit "Update", class: 'btn'
+          .btn
+            = f.submit "Update", class: 'btn'
