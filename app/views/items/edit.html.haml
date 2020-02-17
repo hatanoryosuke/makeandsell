@@ -11,6 +11,8 @@
           .image
             = form.label :image,"商品画像" 
             = form.file_field :image
+            .image_in
+              = image_tag @item.image.url if @item.image?
           .name
             商品名：
             = form.text_field :name, placeholder: "Item name" , rows: "2"

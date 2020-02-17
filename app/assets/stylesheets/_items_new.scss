@@ -21,6 +21,12 @@
       .list{
         .image{
           padding: 20px;
+          .image_in{
+            img{
+            width: 100px;
+            height: 100px;
+            }
+          }
         }
         .name{
           padding: 20px;
