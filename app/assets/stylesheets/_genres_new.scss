@@ -15,6 +15,21 @@
   .chat-group-form_box_{
     padding: 3% 35%;
     font-size: 20px;
-  }
+    .chat-group-form__field.clearfix{
+      .chat-group-form__field--left{
 
+      }
+      .chat-group-form__field--right{
+        .chat-group-form__action-btn{
+          input{
+            width: 150px;
+            height: 32px;
+            background-color: #978d04;
+            color: #fff;
+            border-radius: 30px;
+         }
+        }
+      }
+    }
+  }
 }
