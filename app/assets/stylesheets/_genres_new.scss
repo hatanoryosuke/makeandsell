@@ -19,17 +19,20 @@
       .chat-group-form__field--left{
 
       }
-      .chat-group-form__field--right{
-        .chat-group-form__action-btn{
-          input{
-            width: 150px;
-            height: 32px;
-            background-color: #978d04;
-            color: #fff;
-            border-radius: 30px;
-          }
-        }
-      }
     }
   }
+}
+.chat-group-form__field--right{
+  input#chat_group_name.chat-group-form__input{
+    width: 230px;
+  }
+    input.chat-group-form__action-btn{
+      width: 150px;
+      height: 32px;
+      background-color: #978d04;
+      color: #fff;
+      border-radius: 30px;
+      margin: 20px;
+    }
+  
 }
