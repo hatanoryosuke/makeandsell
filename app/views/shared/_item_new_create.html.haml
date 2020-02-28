@@ -5,25 +5,23 @@
         .image
           = form.label :image,"商品画像" 
           = form.file_field :image, id: :item_image
-          :javascript
-              $(function() {
-              function readURL(input) {
-                if (input.files && input.files[0]) {
-                  var reader = new FileReader();
-                  reader.onload = function (e) {
-                    $('#image_prev').attr('src', e.target.result);
-                  }
-                  reader.readAsDataURL(input.files[0]);
-                }
-              }
-              $("#@items_image").change(function(){
-                readURL(this);
-              });
-              });
-          
           .image_in
             = image_tag @items.image.url, id: :image_prev if @items.image?
-            
+            :javascript
+              $(function() {
+                function readURL(input) {
+                  if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                      $('#image_prev').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                  }
+                }
+                $("#@items_image").change(function(){
+                  readURL(this);
+                });
+              });
 
         .name
           商品名：

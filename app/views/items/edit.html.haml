@@ -10,9 +10,24 @@
         .list
           .image
             = form.label :image,"商品画像" 
-            = form.file_field :image
+            = form.file_field :image, id: :item_image
             .image_in
               = image_tag @item.image.url if @item.image?
+              :javascript
+                $(function() {
+                  function readURL(input) {
+                    if (input.files && input.files[0]) {
+                      var reader = new FileReader();
+                      reader.onload = function (e) {
+                        $('#image_prev').attr('src', e.target.result);
+                      }
+                      reader.readAsDataURL(input.files[0]);
+                    }
+                  }
+                  $("#@items_image").change(function(){
+                    readURL(this);
+                  });
+                });
           .name
             商品名：
             = form.text_field :name, placeholder: "Item name" , rows: "2"
